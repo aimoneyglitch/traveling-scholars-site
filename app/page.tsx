@@ -105,71 +105,72 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      <section className="mx-auto max-w-7xl px-5 py-5 sm:px-6 lg:py-7">
-        <nav className="flex items-center justify-between gap-5">
-          <div className="flex min-w-0 items-center gap-4">
+      <section className="mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-5 lg:py-7">
+        <nav className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-5">
+          <div className="flex min-w-0 items-center gap-3 sm:gap-4">
             <Image
               src="/logo.jpg"
               alt="Traveling Scholars Foundation Inc. logo"
               width={1536}
               height={1024}
+              sizes="(min-width: 640px) 96px, 72px"
               priority
-              className="h-14 w-[84px] shrink-0 rounded-xl object-cover shadow-sm ring-1 ring-black/5 sm:h-16 sm:w-24"
+              className="h-12 w-[72px] shrink-0 rounded-xl object-cover shadow-sm ring-1 ring-black/5 sm:h-16 sm:w-24"
             />
             <div className="min-w-0">
-              <div className="text-xl font-black leading-tight text-[#4b2f83] sm:text-2xl">
+              <div className="text-lg font-black leading-tight text-[#4b2f83] sm:text-2xl">
                 Traveling Scholars
               </div>
-              <div className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500 sm:text-sm">
+              <div className="text-[0.68rem] font-bold uppercase tracking-[0.16em] text-slate-500 sm:text-sm">
                 Foundation Inc.
               </div>
             </div>
           </div>
-          <a href="#early-access" className="shrink-0 rounded-full bg-[#4b2f83] px-5 py-3 text-sm font-black text-white shadow-lg shadow-[#4b2f83]/15 transition hover:bg-[#3f2770] sm:px-6">
+          <a href="#early-access" className="w-full shrink-0 rounded-full bg-[#4b2f83] px-5 py-3 text-center text-sm font-black text-white shadow-lg shadow-[#4b2f83]/15 transition hover:bg-[#3f2770] sm:w-auto sm:px-6">
             Join the Waitlist
           </a>
         </nav>
 
-        <div className="grid min-h-[78vh] items-center gap-10 py-14 sm:py-16 lg:grid-cols-[1.04fr_0.96fr] lg:gap-16 lg:py-20">
+        <div className="grid items-center gap-10 py-12 sm:min-h-[78vh] sm:py-16 lg:grid-cols-[1.04fr_0.96fr] lg:gap-16 lg:py-20">
           <div className="max-w-3xl">
-            <p className="mb-5 text-xs font-black uppercase tracking-[0.28em] text-[#b88a2d] sm:text-sm">
+            <p className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-[#b88a2d] sm:mb-5 sm:text-sm sm:tracking-[0.28em]">
               Homeschool records &bull; portfolios &bull; recognition
             </p>
 
-            <h1 className="max-w-4xl text-5xl font-black leading-[1.02] tracking-tight text-[#080d22] md:text-7xl">
+            <h1 className="max-w-4xl text-4xl font-black leading-[1.04] tracking-tight text-[#080d22] sm:text-5xl md:text-7xl">
               Learning Beyond Walls.
               <span className="block text-[#4b2f83]">Growing Beyond Limits.</span>
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-slate-700 sm:mt-6 sm:text-lg sm:leading-8">
               A modern homeschool organization platform built for families who want structure,
               beautiful records, student pride, transcripts, portfolios, certificates, IDs,
               and community support.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a href="#early-access" className="rounded-2xl bg-[#4b2f83] px-8 py-4 text-center font-black text-white shadow-xl shadow-[#4b2f83]/15 transition hover:bg-[#3f2770]">
+              <a href="#early-access" className="w-full rounded-2xl bg-[#4b2f83] px-6 py-4 text-center font-black text-white shadow-xl shadow-[#4b2f83]/15 transition hover:bg-[#3f2770] sm:w-auto sm:px-8">
                 Join the Parent Waitlist
               </a>
-              <a href="#features" className="rounded-2xl border border-slate-200 bg-white px-8 py-4 text-center font-black text-slate-900 shadow-sm transition hover:border-[#d6a84f]">
+              <a href="#features" className="w-full rounded-2xl border border-slate-200 bg-white px-6 py-4 text-center font-black text-slate-900 shadow-sm transition hover:border-[#d6a84f] sm:w-auto sm:px-8">
                 Explore Features
               </a>
             </div>
           </div>
 
-          <div className="mx-auto w-full max-w-xl rounded-[2rem] bg-white p-5 shadow-2xl shadow-slate-900/10 ring-1 ring-slate-200/70 sm:p-6 lg:mr-0">
-            <div className="rounded-[1.5rem] bg-[#4b2f83] p-7 text-white shadow-lg shadow-[#4b2f83]/20">
+          <div className="mx-auto w-full max-w-xl rounded-[1.5rem] bg-white p-4 shadow-2xl shadow-slate-900/10 ring-1 ring-slate-200/70 sm:rounded-[2rem] sm:p-6 lg:mr-0">
+            <div className="rounded-[1.25rem] bg-[#4b2f83] p-5 text-white shadow-lg shadow-[#4b2f83]/20 sm:rounded-[1.5rem] sm:p-7">
               <p className="text-sm font-black text-[#f1d28a]">Parent Dashboard Preview</p>
-              <div className="mt-3 text-4xl font-black">3 Students Active</div>
+              <div className="mt-3 text-3xl font-black sm:text-4xl">3 Students Active</div>
               <p className="mt-2 text-white/75">Records, progress, and recognition at a glance.</p>
             </div>
 
             <div className="mt-5 grid gap-4">
               {["Attendance", "Gradebook", "Transcripts", "Certificates"].map((item) => (
-                <div key={item} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                  <div className="flex items-center justify-between">
+                <div key={item} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
+                  <div className="flex flex-wrap items-center justify-between gap-3">
                     <span className="font-black">{item}</span>
-                    <span className="rounded-full bg-[#f3ead7] px-4 py-2 text-sm font-black text-[#4b2f83]">Ready</span>
+                    <span className="shrink-0 rounded-full bg-[#f3ead7] px-4 py-2 text-sm font-black text-[#4b2f83]">Ready</span>
                   </div>
                 </div>
               ))}
@@ -178,7 +179,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-slate-200 bg-white px-6 py-8">
+      <section className="border-y border-slate-200 bg-white px-4 py-7 sm:px-6 sm:py-8">
         <div className="mx-auto grid max-w-7xl gap-6 text-center md:grid-cols-4">
           {["Parent controlled", "Private by design", "Mobile first", "Built for families"].map((item) => (
             <div key={item} className="font-black text-[#4b2f83]">{item}</div>
@@ -186,26 +187,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 py-20">
+      <section className="px-4 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
-              <p className="text-sm font-black uppercase tracking-[0.32em] text-[#b88a2d]">
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-[#b88a2d] sm:text-sm sm:tracking-[0.32em]">
                 Built for parents
               </p>
-              <h2 className="mt-4 text-4xl font-black md:text-5xl">
+              <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
                 Less record stress. More confidence when it is time to show progress.
               </h2>
-              <p className="mt-5 text-lg leading-8 text-slate-700">
+              <p className="mt-5 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
                 Traveling Scholars helps homeschool families keep important records
                 organized, presentable, and ready for milestones without turning your
                 homeschool into a paperwork project.
               </p>
             </div>
 
-            <div className="grid gap-5 md:grid-cols-3">
+            <div className="grid gap-4 sm:gap-5 md:grid-cols-3">
               {trustPoints.map(([title, text]) => (
-                <div key={title} className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200/70">
+                <div key={title} className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200/70 sm:rounded-3xl sm:p-6">
                   <h3 className="text-lg font-black text-[#4b2f83]">{title}</h3>
                   <p className="mt-3 leading-7 text-slate-700">{text}</p>
                 </div>
@@ -215,18 +216,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="features" className="px-6 py-24">
+      <section id="features" className="px-4 py-16 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-7xl">
-          <p className="text-center text-sm font-black uppercase tracking-[0.32em] text-[#d6a84f]">
+          <p className="text-center text-xs font-black uppercase tracking-[0.22em] text-[#d6a84f] sm:text-sm sm:tracking-[0.32em]">
             Platform features
           </p>
-          <h2 className="mx-auto mt-4 max-w-4xl text-center text-4xl font-black md:text-5xl">
+          <h2 className="mx-auto mt-4 max-w-4xl text-center text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
             Everything families need to make homeschool feel organized, official, and recognized.
           </h2>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-4">
+          <div className="mt-10 grid gap-5 sm:mt-12 sm:gap-6 md:grid-cols-4">
             {features.map(([title, text]) => (
-              <div key={title} className="rounded-3xl bg-white p-7 shadow-sm">
+              <div key={title} className="rounded-2xl bg-white p-5 shadow-sm sm:rounded-3xl sm:p-7">
                 <h3 className="text-xl font-black text-[#4b2f83]">{title}</h3>
                 <p className="mt-4 leading-7 text-slate-700">{text}</p>
               </div>
@@ -235,18 +236,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how" className="bg-white px-6 py-24">
+      <section id="how" className="bg-white px-4 py-16 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-7xl">
-          <p className="text-center text-sm font-black uppercase tracking-[0.32em] text-[#d6a84f]">
+          <p className="text-center text-xs font-black uppercase tracking-[0.22em] text-[#d6a84f] sm:text-sm sm:tracking-[0.32em]">
             How it works
           </p>
-          <h2 className="mt-4 text-center text-4xl font-black md:text-5xl">
+          <h2 className="mt-4 text-center text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
             Simple enough for busy parents.
           </h2>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-4">
+          <div className="mt-10 grid gap-5 sm:mt-12 sm:gap-6 md:grid-cols-4">
             {steps.map(([title, text], index) => (
-              <div key={title} className="rounded-3xl border border-slate-200 bg-[#f8f4ee] p-7">
+              <div key={title} className="rounded-2xl border border-slate-200 bg-[#f8f4ee] p-5 sm:rounded-3xl sm:p-7">
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#4b2f83] font-black text-white">
                   {index + 1}
                 </div>
@@ -258,20 +259,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 py-24">
+      <section className="px-4 py-16 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.32em] text-[#b88a2d]">
+            <p className="text-xs font-black uppercase tracking-[0.22em] text-[#b88a2d] sm:text-sm sm:tracking-[0.32em]">
               What families will be able to create
             </p>
-            <h2 className="mt-4 text-4xl font-black md:text-5xl">
+            <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
               Official-feeling records without heavy software or scattered files.
             </h2>
           </div>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3">
             {creations.map((item) => (
-              <div key={item} className="rounded-3xl border border-slate-200 bg-white p-6 text-center text-xl font-black text-[#4b2f83] shadow-sm">
+              <div key={item} className="rounded-2xl border border-slate-200 bg-white p-5 text-center text-lg font-black text-[#4b2f83] shadow-sm sm:rounded-3xl sm:p-6 sm:text-xl">
                 {item}
               </div>
             ))}
@@ -279,27 +280,27 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="pricing" className="px-6 py-24">
+      <section id="pricing" className="px-4 py-16 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.32em] text-[#b88a2d]">
+            <p className="text-xs font-black uppercase tracking-[0.22em] text-[#b88a2d] sm:text-sm sm:tracking-[0.32em]">
               Founding family options
             </p>
-            <h2 className="mt-4 text-4xl font-black md:text-5xl">
+            <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
               Start simple, then grow into a polished homeschool record system.
             </h2>
-            <p className="mt-5 text-lg leading-8 text-slate-700">
+            <p className="mt-5 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
               Pricing is being finalized for launch. Families can request early access now
               and choose the right path when the first release opens.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:mt-12 sm:gap-6 lg:grid-cols-3">
             {pricing.map(([name, price, description, benefits]) => (
-              <div key={name} className="flex min-h-[360px] flex-col rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm">
+              <div key={name} className="flex min-h-[340px] flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:min-h-[360px] sm:rounded-[2rem] sm:p-7">
                 <div>
                   <h3 className="text-2xl font-black text-[#4b2f83]">{name}</h3>
-                  <p className="mt-4 text-4xl font-black text-[#080d22]">{price}</p>
+                  <p className="mt-4 text-3xl font-black text-[#080d22] sm:text-4xl">{price}</p>
                   <p className="mt-4 leading-7 text-slate-700">{description}</p>
                 </div>
                 <ul className="mt-7 grid gap-3 text-sm font-bold text-slate-700">
@@ -309,7 +310,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <a href="mailto:hello@travelingscholars.org?subject=Traveling%20Scholars%20early%20access" className="mt-auto inline-block rounded-2xl bg-[#4b2f83] px-6 py-4 text-center font-black text-white shadow-lg shadow-[#4b2f83]/15 transition hover:bg-[#3f2770]">
+                <a href="mailto:hello@travelingscholars.org?subject=Traveling%20Scholars%20early%20access" className="mt-auto inline-block w-full rounded-2xl bg-[#4b2f83] px-5 py-4 text-center font-black text-white shadow-lg shadow-[#4b2f83]/15 transition hover:bg-[#3f2770]">
                   Ask About This Option
                 </a>
               </div>
@@ -318,34 +319,34 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="early-access" className="bg-white px-6 py-24">
-        <div className="mx-auto grid max-w-6xl gap-8 rounded-[2rem] bg-[#4b2f83] p-8 text-white shadow-2xl shadow-[#4b2f83]/15 md:grid-cols-[1.2fr_0.8fr] md:p-10">
+      <section id="early-access" className="bg-white px-4 py-16 sm:px-6 sm:py-24">
+        <div className="mx-auto grid max-w-6xl gap-6 rounded-[1.5rem] bg-[#4b2f83] p-5 text-white shadow-2xl shadow-[#4b2f83]/15 sm:gap-8 sm:rounded-[2rem] sm:p-8 md:grid-cols-[1.2fr_0.8fr] md:p-10">
           <div>
             <p className="font-black text-[#f1d28a]">Founding Family Early Access</p>
-            <h2 className="mt-4 text-4xl font-black md:text-5xl">Help shape the platform before launch.</h2>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-white/80">
+            <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl md:text-5xl">Help shape the platform before launch.</h2>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
               Join the parent waitlist for launch updates, founding family pricing,
               and first access to Traveling Scholars when preview invitations open.
             </p>
           </div>
-          <div className="rounded-[1.5rem] bg-white p-6 text-slate-950">
-            <p className="text-sm font-black uppercase tracking-[0.2em] text-[#b88a2d]">
+          <div className="rounded-[1.25rem] bg-white p-5 text-slate-950 sm:rounded-[1.5rem] sm:p-6">
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-[#b88a2d] sm:text-sm sm:tracking-[0.2em]">
               No payment required
             </p>
             <p className="mt-4 leading-7 text-slate-700">
               Send a quick email and we will follow up with preview details, timing,
               and founding family information.
             </p>
-            <a href="mailto:hello@travelingscholars.org?subject=Traveling%20Scholars%20early%20access" className="mt-6 inline-block w-full rounded-2xl bg-[#4b2f83] px-8 py-4 text-center font-black text-white">
+            <a href="mailto:hello@travelingscholars.org?subject=Traveling%20Scholars%20early%20access" className="mt-6 inline-block w-full rounded-2xl bg-[#4b2f83] px-5 py-4 text-center font-black text-white">
               Join by Email
             </a>
           </div>
         </div>
       </section>
 
-      <section className="px-6 py-16">
-        <div className="mx-auto max-w-5xl rounded-3xl border border-[#d6a84f]/40 bg-[#fffaf0] p-7 text-center shadow-sm">
-          <p className="text-base font-bold leading-8 text-slate-800">
+      <section className="px-4 py-12 sm:px-6 sm:py-16">
+        <div className="mx-auto max-w-5xl rounded-2xl border border-[#d6a84f]/40 bg-[#fffaf0] p-5 text-center shadow-sm sm:rounded-3xl sm:p-7">
+          <p className="text-sm font-bold leading-7 text-slate-800 sm:text-base sm:leading-8">
             Traveling Scholars is a homeschool organization and records platform.
             It is not an accredited school or curriculum provider.
             Parents remain responsible for curriculum, instruction, records accuracy,
@@ -354,18 +355,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="faq" className="bg-white px-6 py-24">
+      <section id="faq" className="bg-white px-4 py-16 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-5xl">
-          <p className="text-center text-sm font-black uppercase tracking-[0.32em] text-[#b88a2d]">
+          <p className="text-center text-xs font-black uppercase tracking-[0.22em] text-[#b88a2d] sm:text-sm sm:tracking-[0.32em]">
             FAQ
           </p>
-          <h2 className="mt-4 text-center text-4xl font-black md:text-5xl">
+          <h2 className="mt-4 text-center text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
             A few details before launch.
           </h2>
 
-          <div className="mt-12 grid gap-4">
+          <div className="mt-10 grid gap-4 sm:mt-12">
             {faqs.map(([question, answer]) => (
-              <div key={question} className="rounded-3xl border border-slate-200 bg-[#f8f4ee] p-7">
+              <div key={question} className="rounded-2xl border border-slate-200 bg-[#f8f4ee] p-5 sm:rounded-3xl sm:p-7">
                 <h3 className="text-xl font-black text-[#4b2f83]">{question}</h3>
                 <p className="mt-3 leading-7 text-slate-700">{answer}</p>
               </div>
@@ -374,7 +375,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-slate-200 bg-white px-6 py-10">
+      <footer className="border-t border-slate-200 bg-white px-4 py-8 sm:px-6 sm:py-10">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
             <div className="text-xl font-black text-[#4b2f83]">Traveling Scholars</div>
