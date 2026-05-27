@@ -49,11 +49,11 @@ export function WaitlistForm() {
       </div>
 
       <button type="submit" className="mt-2 rounded-2xl bg-[#4b2f83] px-5 py-4 text-center font-black text-white shadow-lg shadow-[#4b2f83]/15 transition hover:bg-[#3f2770]">
-        Join the Waitlist
+        Join by Email
       </button>
 
       <p className="text-sm font-bold leading-6 text-slate-500">
-        Launch updates only. No payment, no account, and no student records required.
+        Launch updates only. This opens your email app; if it does not, email hello@travelingscholars.org with the subject "Traveling Scholars early access." No payment, account, or student records required.
       </p>
     </form>
   );

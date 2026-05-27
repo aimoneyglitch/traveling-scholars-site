@@ -13,7 +13,8 @@ export const metadata: Metadata = {
     "student portfolios",
     "homeschool community",
     "homeschool records",
-    "homeschool diploma",
+    "homeschool graduation records",
+    "homeschool recognition documents",
     "homeschool certificates",
     "traveling scholars"
   ],

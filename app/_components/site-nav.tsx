@@ -17,12 +17,11 @@ export function SiteNav({ ctaHref = "/#early-access" }: SiteNavProps) {
     <nav className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-5">
       <a href="/" className="flex min-w-0 items-center gap-3 sm:gap-4">
         <Image
-          src="/logo.jpg"
+          src="/logo-web.jpg"
           alt="Traveling Scholars Foundation Inc. logo"
-          width={1536}
-          height={1024}
+          width={288}
+          height={192}
           sizes="(min-width: 640px) 96px, 72px"
-          priority
           className="h-12 w-[72px] shrink-0 rounded-xl object-cover shadow-sm ring-1 ring-black/5 sm:h-16 sm:w-24"
         />
         <span className="min-w-0">
