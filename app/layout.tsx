@@ -2,6 +2,7 @@
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://thetravelingscholars.org"),
   title: "Traveling Scholars Foundation Inc. | Modern Homeschool Organization Platform",
   description:
     "A modern homeschool organization platform for transcripts, portfolios, student records, certificates, IDs, and homeschool family community support.",
@@ -16,13 +17,31 @@ export const metadata: Metadata = {
     "homeschool certificates",
     "traveling scholars"
   ],
+  alternates: {
+    canonical: "/"
+  },
   openGraph: {
     title: "Traveling Scholars Foundation Inc.",
     description:
       "Modern homeschool organization, records, portfolios, and recognition platform.",
-    url: "https://travelingscholars.org",
+    url: "https://thetravelingscholars.org",
     siteName: "Traveling Scholars Foundation Inc.",
+    images: [
+      {
+        url: "/logo.jpg",
+        width: 1536,
+        height: 1024,
+        alt: "Traveling Scholars Foundation Inc. logo"
+      }
+    ],
     type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Traveling Scholars Foundation Inc.",
+    description:
+      "Modern homeschool organization, records, portfolios, and recognition platform.",
+    images: ["/logo.jpg"]
   }
 };
 

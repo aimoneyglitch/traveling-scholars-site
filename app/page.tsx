@@ -57,9 +57,39 @@ const faqs: Faq[] = [
   ]
 ];
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://thetravelingscholars.org/#organization",
+      name: "Traveling Scholars Foundation Inc.",
+      url: "https://thetravelingscholars.org",
+      logo: "https://thetravelingscholars.org/logo.jpg",
+      description:
+        "A homeschool organization and records platform for transcripts, portfolios, student records, certificates, IDs, and homeschool family community support."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thetravelingscholars.org/#website",
+      url: "https://thetravelingscholars.org",
+      name: "Traveling Scholars Foundation Inc.",
+      publisher: {
+        "@id": "https://thetravelingscholars.org/#organization"
+      },
+      inLanguage: "en-US"
+    }
+  ]
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f8f4ee] text-slate-950">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       <section className="mx-auto max-w-7xl px-5 py-5 sm:px-6 lg:py-7">
         <nav className="flex items-center justify-between gap-5">
           <div className="flex min-w-0 items-center gap-4">
@@ -115,7 +145,7 @@ export default function Home() {
           <div className="mx-auto w-full max-w-xl rounded-[2rem] bg-white p-5 shadow-2xl shadow-slate-900/10 ring-1 ring-slate-200/70 sm:p-6 lg:mr-0">
             <div className="rounded-[1.5rem] bg-[#4b2f83] p-7 text-white shadow-lg shadow-[#4b2f83]/20">
               <p className="text-sm font-black text-[#f1d28a]">Parent Dashboard Preview</p>
-              <h2 className="mt-3 text-4xl font-black">3 Students Active</h2>
+              <div className="mt-3 text-4xl font-black">3 Students Active</div>
               <p className="mt-2 text-white/75">Records, progress, and recognition at a glance.</p>
             </div>
 
