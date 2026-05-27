@@ -9,6 +9,33 @@ const heroTrust = [
   "Not a school or curriculum provider"
 ];
 
+const dashboardPreviews = [
+  {
+    title: "Transcript preview",
+    label: "Draft ready",
+    value: "24.5 credits",
+    detail: "Course years, credits, grades, and GPA organized for parent review."
+  },
+  {
+    title: "Student ID preview",
+    label: "Profile linked",
+    value: "2026 ID",
+    detail: "Student details flow into clean ID and recognition document layouts."
+  },
+  {
+    title: "Attendance overview",
+    label: "Year-to-date",
+    value: "142 days",
+    detail: "Track learning days, notes, absences, and family record totals."
+  },
+  {
+    title: "GPA/gradebook card",
+    label: "Calculated view",
+    value: "3.82 GPA",
+    detail: "Grades and credits stay transparent before transcript generation."
+  }
+];
+
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -88,7 +115,7 @@ export default function Home() {
 
             <div className="mt-5 grid gap-4">
               {["Attendance log", "Gradebook summary", "Transcript draft", "Certificate set"].map((item) => (
-                <div key={item} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
+                <div key={item} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-900/5 sm:p-5">
                   <div className="flex flex-wrap items-center justify-between gap-3">
                     <span className="font-black">{item}</span>
                     <span className="shrink-0 rounded-full bg-[#f3ead7] px-4 py-2 text-sm font-black text-[#4b2f83]">Preview</span>
@@ -127,9 +154,45 @@ export default function Home() {
 
             <div className="grid gap-4 sm:gap-5 md:grid-cols-3">
               {trustPoints.map(([title, text]) => (
-                <div key={title} className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200/70 sm:rounded-3xl sm:p-6">
+                <div key={title} className="rounded-2xl bg-white p-5 shadow-lg shadow-slate-900/5 ring-1 ring-slate-200/70 sm:rounded-3xl sm:p-6">
                   <h3 className="text-lg font-black text-[#4b2f83]">{title}</h3>
                   <p className="mt-3 leading-7 text-slate-700">{text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-4 py-16 sm:px-6 sm:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-[#b88a2d] sm:text-sm sm:tracking-[0.32em]">
+                Software preview
+              </p>
+              <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
+                Product logic parents can understand at a glance.
+              </h2>
+              <p className="mt-5 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
+                These static previews show the kind of organized, document-ready views
+                Traveling Scholars is being designed to provide.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {dashboardPreviews.map((card) => (
+                <div key={card.title} className="rounded-2xl border border-slate-200 bg-[#f8f4ee] p-5 shadow-lg shadow-slate-900/5 sm:rounded-3xl sm:p-6">
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="text-xl font-black text-[#4b2f83]">{card.title}</h3>
+                    <span className="shrink-0 rounded-full bg-white px-3 py-2 text-xs font-black uppercase tracking-[0.12em] text-[#b88a2d]">
+                      {card.label}
+                    </span>
+                  </div>
+                  <div className="mt-6 rounded-2xl bg-white p-4 shadow-sm shadow-slate-900/5">
+                    <p className="text-3xl font-black text-[#080d22]">{card.value}</p>
+                    <p className="mt-3 leading-7 text-slate-700">{card.detail}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -148,7 +211,7 @@ export default function Home() {
 
           <div className="mt-10 grid gap-5 sm:mt-12 sm:gap-6 md:grid-cols-4">
             {features.map(([title, text]) => (
-              <div key={title} className="rounded-2xl bg-white p-5 shadow-sm sm:rounded-3xl sm:p-7">
+              <div key={title} className="rounded-2xl bg-white p-5 shadow-lg shadow-slate-900/5 sm:rounded-3xl sm:p-7">
                 <h3 className="text-xl font-black text-[#4b2f83]">{title}</h3>
                 <p className="mt-4 leading-7 text-slate-700">{text}</p>
               </div>
@@ -168,7 +231,7 @@ export default function Home() {
 
           <div className="mt-10 grid gap-5 sm:mt-12 sm:gap-6 md:grid-cols-4">
             {steps.map(([title, text], index) => (
-              <div key={title} className="rounded-2xl border border-slate-200 bg-[#f8f4ee] p-5 sm:rounded-3xl sm:p-7">
+              <div key={title} className="rounded-2xl border border-slate-200 bg-[#f8f4ee] p-5 shadow-sm shadow-slate-900/5 sm:rounded-3xl sm:p-7">
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#4b2f83] font-black text-white">
                   {index + 1}
                 </div>
@@ -193,7 +256,7 @@ export default function Home() {
 
           <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3">
             {creations.map((item) => (
-              <div key={item} className="rounded-2xl border border-slate-200 bg-white p-5 text-center text-lg font-black text-[#4b2f83] shadow-sm sm:rounded-3xl sm:p-6 sm:text-xl">
+              <div key={item} className="rounded-2xl border border-slate-200 bg-white p-5 text-center text-lg font-black text-[#4b2f83] shadow-lg shadow-slate-900/5 sm:rounded-3xl sm:p-6 sm:text-xl">
                 {item}
               </div>
             ))}
@@ -218,7 +281,7 @@ export default function Home() {
 
           <div className="mt-10 grid gap-5 sm:mt-12 sm:gap-6 lg:grid-cols-3">
             {pricing.map(([name, price, description, benefits]) => (
-              <div key={name} className="flex min-h-[340px] flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:min-h-[360px] sm:rounded-[2rem] sm:p-7">
+              <div key={name} className="flex min-h-[340px] flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-lg shadow-slate-900/5 sm:min-h-[360px] sm:rounded-[2rem] sm:p-7">
                 <div>
                   <h3 className="text-2xl font-black text-[#4b2f83]">{name}</h3>
                   <p className="mt-4 text-3xl font-black text-[#080d22] sm:text-4xl">{price}</p>
