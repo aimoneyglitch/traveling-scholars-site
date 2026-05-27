@@ -3,6 +3,12 @@ import { SiteFooter } from "./_components/site-footer";
 import { WaitlistForm } from "./_components/waitlist-form";
 import { creations, faqs, features, pricing, steps, trustPoints } from "./site-data";
 
+const heroTrust = [
+  "Parent-led records",
+  "No student data required to join",
+  "Not a school or curriculum provider"
+];
+
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -46,19 +52,26 @@ export default function Home() {
             </p>
 
             <h1 className="max-w-4xl text-4xl font-black leading-[1.04] tracking-tight text-[#080d22] sm:text-5xl md:text-7xl">
-              Learning Beyond Walls.
-              <span className="block text-[#4b2f83]">Growing Beyond Limits.</span>
+              Homeschool records that feel organized, official, and parent-controlled.
             </h1>
 
             <p className="mt-5 max-w-2xl text-base leading-7 text-slate-700 sm:mt-6 sm:text-lg sm:leading-8">
-              A modern homeschool organization platform built for families who want structure,
-              beautiful records, student pride, transcripts, portfolios, certificates, IDs,
-              and community support.
+              Traveling Scholars helps families prepare transcripts, attendance,
+              grades, portfolios, student IDs, and certificates without turning
+              homeschool into a paperwork project.
             </p>
+
+            <div className="mt-6 grid gap-3 text-sm font-black text-slate-700 sm:grid-cols-3">
+              {heroTrust.map((item) => (
+                <div key={item} className="rounded-2xl border border-[#d6a84f]/30 bg-white/80 px-4 py-3 shadow-sm">
+                  {item}
+                </div>
+              ))}
+            </div>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a href="#early-access" className="w-full rounded-2xl bg-[#4b2f83] px-6 py-4 text-center font-black text-white shadow-xl shadow-[#4b2f83]/15 transition hover:bg-[#3f2770] sm:w-auto sm:px-8">
-                Join the Parent Waitlist
+                Join for Launch Updates
               </a>
               <a href="#features" className="w-full rounded-2xl border border-slate-200 bg-white px-6 py-4 text-center font-black text-slate-900 shadow-sm transition hover:border-[#d6a84f] sm:w-auto sm:px-8">
                 Explore Features
@@ -68,17 +81,17 @@ export default function Home() {
 
           <div className="mx-auto w-full max-w-xl rounded-[1.5rem] bg-white p-4 shadow-2xl shadow-slate-900/10 ring-1 ring-slate-200/70 sm:rounded-[2rem] sm:p-6 lg:mr-0">
             <div className="rounded-[1.25rem] bg-[#4b2f83] p-5 text-white shadow-lg shadow-[#4b2f83]/20 sm:rounded-[1.5rem] sm:p-7">
-              <p className="text-sm font-black text-[#f1d28a]">Parent Dashboard Preview</p>
-              <div className="mt-3 text-3xl font-black sm:text-4xl">3 Students Active</div>
-              <p className="mt-2 text-white/75">Records, progress, and recognition at a glance.</p>
+              <p className="text-sm font-black text-[#f1d28a]">Future Parent Dashboard</p>
+              <div className="mt-3 text-3xl font-black sm:text-4xl">3 student records organized</div>
+              <p className="mt-2 text-white/75">A calmer view of progress, documents, and milestones.</p>
             </div>
 
             <div className="mt-5 grid gap-4">
-              {["Attendance", "Gradebook", "Transcripts", "Certificates"].map((item) => (
+              {["Attendance log", "Gradebook summary", "Transcript draft", "Certificate set"].map((item) => (
                 <div key={item} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
                   <div className="flex flex-wrap items-center justify-between gap-3">
                     <span className="font-black">{item}</span>
-                    <span className="shrink-0 rounded-full bg-[#f3ead7] px-4 py-2 text-sm font-black text-[#4b2f83]">Ready</span>
+                    <span className="shrink-0 rounded-full bg-[#f3ead7] px-4 py-2 text-sm font-black text-[#4b2f83]">Preview</span>
                   </div>
                 </div>
               ))}
@@ -89,7 +102,7 @@ export default function Home() {
 
       <section className="border-y border-slate-200 bg-white px-4 py-7 sm:px-6 sm:py-8">
         <div className="mx-auto grid max-w-7xl gap-6 text-center md:grid-cols-4">
-          {["Parent controlled", "Private by design", "Mobile first", "Built for families"].map((item) => (
+          {["Parent controlled", "Family privacy focused", "Launch updates only", "Built for homeschool records"].map((item) => (
             <div key={item} className="font-black text-[#4b2f83]">{item}</div>
           ))}
         </div>
