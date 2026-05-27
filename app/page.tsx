@@ -37,6 +37,35 @@ const dashboardPreviews = [
   }
 ];
 
+const credibilityCallouts = [
+  ["Privacy-first", "Families should not have to trade student privacy for cleaner homeschool records."],
+  ["Parent-controlled", "Parents remain responsible for the records they create, review, correct, and share."],
+  ["Modern records organization", "Transcripts, attendance, grades, portfolios, IDs, and certificates can live in a calmer workflow."],
+  ["Built for homeschool families", "The platform is being shaped around parent-led learning, flexible paths, and meaningful milestones."]
+];
+
+const whyFamiliesSwitch = [
+  ["From scattered files", "Families outgrow folders, screenshots, and last-minute transcript spreadsheets."],
+  ["From generic tools", "Homeschool records need context that ordinary document apps were not designed to provide."],
+  ["From end-of-year stress", "Keeping progress organized throughout the year makes reviews and milestones easier."],
+  ["From unclear records", "Clean, consistent documentation helps parents explain progress with more confidence."]
+];
+
+const communityVision = [
+  ["Homeschool family stories", "A future place to highlight real parent-led learning journeys, projects, and student growth."],
+  ["Future graduation recognition", "Support for tasteful celebration moments, completion records, and family-led graduation milestones."],
+  ["Student achievement showcases", "Portfolio-friendly ways to preserve service, projects, awards, reading, creativity, and progress."],
+  ["Community support vision", "A long-term vision for connection, encouragement, field trips, events, and shared homeschool momentum."]
+];
+
+const platformVision = [
+  "Transcript preparation",
+  "Portfolio organization",
+  "Student ID records",
+  "Certificate creation",
+  "Graduation support"
+];
+
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -172,6 +201,34 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-white px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-[#b88a2d] sm:text-sm sm:tracking-[0.32em]">
+                Credibility layer
+              </p>
+              <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
+                Trust starts with clear boundaries and parent control.
+              </h2>
+              <p className="mt-5 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
+                Traveling Scholars is being built for families who want polished
+                records without pretending a platform replaces the parent&apos;s role.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {credibilityCallouts.map(([title, text]) => (
+                <div key={title} className="rounded-2xl border border-slate-200 bg-[#f8f4ee] p-5 shadow-sm sm:rounded-3xl sm:p-6">
+                  <h3 className="text-xl font-black text-[#4b2f83]">{title}</h3>
+                  <p className="mt-3 leading-7 text-slate-700">{text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-white px-4 py-16 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
@@ -208,6 +265,32 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="px-4 py-16 sm:px-6 sm:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-black uppercase tracking-[0.22em] text-[#b88a2d] sm:text-sm sm:tracking-[0.32em]">
+              Why families switch
+            </p>
+            <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
+              Families need more than another place to store files.
+            </h2>
+            <p className="mt-5 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
+              The goal is a records rhythm that makes homeschool progress easier
+              to understand, preserve, and present when milestones arrive.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-5 sm:mt-12 sm:gap-6 md:grid-cols-4">
+            {whyFamiliesSwitch.map(([title, text]) => (
+              <div key={title} className="rounded-2xl bg-white p-5 shadow-lg shadow-slate-900/5 ring-1 ring-slate-200/70 sm:rounded-3xl sm:p-6">
+                <h3 className="text-lg font-black text-[#4b2f83]">{title}</h3>
+                <p className="mt-3 leading-7 text-slate-700">{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="features" className="px-4 py-16 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-7xl">
           <p className="text-center text-xs font-black uppercase tracking-[0.22em] text-[#d6a84f] sm:text-sm sm:tracking-[0.32em]">
@@ -224,6 +307,35 @@ export default function Home() {
                 <p className="mt-4 leading-7 text-slate-700">{text}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-4 py-16 sm:px-6 sm:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-[#b88a2d] sm:text-sm sm:tracking-[0.32em]">
+                Community vision
+              </p>
+              <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
+                A records platform with room for family stories and student pride.
+              </h2>
+              <p className="mt-5 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
+                Traveling Scholars is starting with records, but the bigger vision
+                is a homeschool community where progress can be organized,
+                recognized, and celebrated with care.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {communityVision.map(([title, text]) => (
+                <div key={title} className="rounded-2xl border border-slate-200 bg-[#f8f4ee] p-5 shadow-sm sm:rounded-3xl sm:p-6">
+                  <h3 className="text-xl font-black text-[#4b2f83]">{title}</h3>
+                  <p className="mt-3 leading-7 text-slate-700">{text}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -265,6 +377,32 @@ export default function Home() {
           <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3">
             {creations.map((item) => (
               <div key={item} className="rounded-2xl border border-slate-200 bg-white p-5 text-center text-lg font-black text-[#4b2f83] shadow-lg shadow-slate-900/5 sm:rounded-3xl sm:p-6 sm:text-xl">
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-4 py-16 sm:px-6 sm:py-24">
+        <div className="mx-auto grid max-w-7xl gap-8 rounded-[1.5rem] border border-slate-200 bg-[#f8f4ee] p-5 shadow-sm sm:rounded-[2rem] sm:p-8 lg:grid-cols-[0.85fr_1.15fr] lg:p-10">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.22em] text-[#b88a2d] sm:text-sm sm:tracking-[0.32em]">
+              Future platform vision
+            </p>
+            <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
+              Built toward the moments families care about most.
+            </h2>
+            <p className="mt-5 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
+              The first release is focused on practical records, with a roadmap
+              shaped around the documents and recognition homeschool families
+              naturally need over time.
+            </p>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2">
+            {platformVision.map((item) => (
+              <div key={item} className="rounded-2xl bg-white px-5 py-4 font-black text-[#4b2f83] shadow-sm">
                 {item}
               </div>
             ))}
