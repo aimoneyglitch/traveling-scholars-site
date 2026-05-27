@@ -5,9 +5,9 @@ import { pageMetadata } from "./seo";
 import { creations, faqs, features, pricing, steps, trustPoints } from "./site-data";
 
 const heroTrust = [
-  "Parent-led records",
-  "No student data required to join",
-  "Not a school or curriculum provider"
+  ["01", "Parent-led records", "You stay in control of what is created and shared."],
+  ["02", "No student data required to join", "Early access only asks for launch-update interest."],
+  ["03", "Not a school or curriculum provider", "Clear boundaries keep the platform honest."]
 ];
 
 const dashboardPreviews = [
@@ -109,13 +109,14 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-5 lg:py-7">
         <SiteNav ctaHref="#early-access" />
 
-        <div className="grid items-center gap-10 py-12 sm:min-h-[78vh] sm:py-16 lg:grid-cols-[1.04fr_0.96fr] lg:gap-16 lg:py-20">
+        <div className="grid items-center gap-10 py-10 sm:min-h-[78vh] sm:py-16 lg:grid-cols-[1.04fr_0.96fr] lg:gap-16 lg:py-20">
           <div className="max-w-3xl">
-            <p className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-[#b88a2d] sm:mb-5 sm:text-sm sm:tracking-[0.28em]">
+            <p className="mb-4 inline-flex max-w-full items-center gap-2 rounded-full border border-[#d6a84f]/35 bg-white px-4 py-2 text-[0.7rem] font-black uppercase tracking-[0.14em] text-[#8f6720] shadow-sm sm:mb-5 sm:text-sm sm:tracking-[0.24em]">
+              <span className="h-2 w-2 rounded-full bg-[#d6a84f]" />
               Homeschool records &bull; portfolios &bull; recognition
             </p>
 
-            <h1 className="max-w-4xl text-4xl font-black leading-[1.04] tracking-tight text-[#080d22] sm:text-5xl md:text-7xl">
+            <h1 className="max-w-4xl text-[2.65rem] font-black leading-[1.03] tracking-tight text-[#080d22] sm:text-5xl md:text-7xl">
               Homeschool records that feel organized, official, and parent-controlled.
             </h1>
 
@@ -125,17 +126,27 @@ export default function Home() {
               homeschool into a paperwork project.
             </p>
 
-            <div className="mt-6 grid gap-3 text-sm font-black text-slate-700 sm:grid-cols-3">
-              {heroTrust.map((item) => (
-                <div key={item} className="rounded-2xl border border-[#d6a84f]/30 bg-white/80 px-4 py-3 shadow-sm">
-                  {item}
+            <div className="mt-6 grid gap-3 text-sm text-slate-700 sm:grid-cols-3">
+              {heroTrust.map(([icon, title, text]) => (
+                <div key={title} className="grid grid-cols-[2.5rem_1fr_1.75rem] items-center gap-3 rounded-2xl border border-[#d6a84f]/30 bg-white/90 p-3 shadow-sm shadow-slate-900/5">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f3ead7] text-xs font-black text-[#4b2f83]">
+                    {icon}
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block font-black text-slate-900">{title}</span>
+                    <span className="mt-0.5 block text-xs font-bold leading-5 text-slate-500">{text}</span>
+                  </span>
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#4b2f83] text-sm font-black text-white">
+                    ✓
+                  </span>
                 </div>
               ))}
             </div>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a href="#early-access" className="w-full rounded-2xl bg-[#4b2f83] px-6 py-4 text-center font-black text-white shadow-xl shadow-[#4b2f83]/15 transition hover:bg-[#3f2770] sm:w-auto sm:px-8">
-                Join for Launch Updates
+              <a href="#early-access" className="flex w-full items-center justify-center gap-3 rounded-2xl bg-[#4b2f83] px-6 py-4 text-center font-black text-white shadow-xl shadow-[#4b2f83]/15 transition hover:bg-[#3f2770] sm:w-auto sm:px-8">
+                <span>Join for Launch Updates</span>
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/15">→</span>
               </a>
               <a href="#features" className="w-full rounded-2xl border border-slate-200 bg-white px-6 py-4 text-center font-black text-slate-900 shadow-sm transition hover:border-[#d6a84f] sm:w-auto sm:px-8">
                 Explore Features
