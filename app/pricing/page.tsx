@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { SiteFooter } from "../_components/site-footer";
 import { SiteNav } from "../_components/site-nav";
-import { mailtoHref, pricing } from "../site-data";
+import { pricing } from "../site-data";
 
 export const metadata: Metadata = {
   title: "Pricing | Traveling Scholars Foundation Inc.",
@@ -50,7 +50,7 @@ export default function PricingPage() {
                   </li>
                 ))}
               </ul>
-              <a href={mailtoHref} className="mt-auto inline-block w-full rounded-2xl bg-[#4b2f83] px-5 py-4 text-center font-black text-white shadow-lg shadow-[#4b2f83]/15 transition hover:bg-[#3f2770]">
+              <a href="/contact/#waitlist" className="mt-auto inline-block w-full rounded-2xl bg-[#4b2f83] px-5 py-4 text-center font-black text-white shadow-lg shadow-[#4b2f83]/15 transition hover:bg-[#3f2770]">
                 Ask About This Option
               </a>
             </div>

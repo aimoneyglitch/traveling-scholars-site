@@ -1,6 +1,7 @@
 import { SiteNav } from "./_components/site-nav";
 import { SiteFooter } from "./_components/site-footer";
-import { creations, faqs, features, mailtoHref, pricing, steps, trustPoints } from "./site-data";
+import { WaitlistForm } from "./_components/waitlist-form";
+import { creations, faqs, features, pricing, steps, trustPoints } from "./site-data";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -217,7 +218,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <a href={mailtoHref} className="mt-auto inline-block w-full rounded-2xl bg-[#4b2f83] px-5 py-4 text-center font-black text-white shadow-lg shadow-[#4b2f83]/15 transition hover:bg-[#3f2770]">
+                <a href="/contact/#waitlist" className="mt-auto inline-block w-full rounded-2xl bg-[#4b2f83] px-5 py-4 text-center font-black text-white shadow-lg shadow-[#4b2f83]/15 transition hover:bg-[#3f2770]">
                   Ask About This Option
                 </a>
               </div>
@@ -238,15 +239,15 @@ export default function Home() {
           </div>
           <div className="rounded-[1.25rem] bg-white p-5 text-slate-950 sm:rounded-[1.5rem] sm:p-6">
             <p className="text-xs font-black uppercase tracking-[0.18em] text-[#b88a2d] sm:text-sm sm:tracking-[0.2em]">
-              No payment required
+              Launch updates only
             </p>
             <p className="mt-4 leading-7 text-slate-700">
-              Send a quick email and we will follow up with preview details, timing,
-              and founding family information.
+              Add your name, email, and homeschool role. This static preview uses your
+              email app to send the request for now.
             </p>
-            <a href={mailtoHref} className="mt-6 inline-block w-full rounded-2xl bg-[#4b2f83] px-5 py-4 text-center font-black text-white">
-              Join by Email
-            </a>
+            <div className="mt-6">
+              <WaitlistForm />
+            </div>
           </div>
         </div>
       </section>

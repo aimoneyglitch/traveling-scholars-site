@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { SiteFooter } from "../_components/site-footer";
 import { SiteNav } from "../_components/site-nav";
-import { mailtoHref } from "../site-data";
+import { WaitlistForm } from "../_components/waitlist-form";
 
 export const metadata: Metadata = {
   title: "Contact | Traveling Scholars Foundation Inc.",
@@ -28,12 +28,27 @@ export default function ContactPage() {
             Reach out about early access.
           </h1>
           <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
-            The current site stays lightweight and static, so contact is handled by email
-            instead of an embedded form.
+            The current site stays lightweight and static, so waitlist requests open
+            through your email app instead of being stored in a database.
           </p>
-          <a href={mailtoHref} className="mt-8 inline-block rounded-2xl bg-[#4b2f83] px-8 py-4 text-center font-black text-white shadow-xl shadow-[#4b2f83]/15 transition hover:bg-[#3f2770]">
-            Email Traveling Scholars
-          </a>
+        </div>
+      </section>
+
+      <section id="waitlist" className="px-4 pb-16 sm:px-6 sm:pb-24">
+        <div className="mx-auto grid max-w-6xl gap-8 rounded-[1.5rem] bg-white p-5 shadow-sm ring-1 ring-slate-200/70 sm:rounded-[2rem] sm:p-8 md:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.22em] text-[#b88a2d] sm:text-sm sm:tracking-[0.32em]">
+              Waitlist
+            </p>
+            <h2 className="mt-4 text-3xl font-black leading-tight text-[#080d22] sm:text-4xl">
+              Join for launch updates only.
+            </h2>
+            <p className="mt-4 leading-7 text-slate-700">
+              No payment is required, and you do not need to send student records.
+              The form is static for now and uses your email app to send the request.
+            </p>
+          </div>
+          <WaitlistForm />
         </div>
       </section>
 
