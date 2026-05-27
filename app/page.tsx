@@ -14,6 +14,21 @@ const steps = [
   ["Generate documents", "Transcripts, certificates, IDs, and portfolios look professional."]
 ];
 
+const creations = [
+  "Transcripts",
+  "Student IDs",
+  "Certificates",
+  "Portfolios",
+  "Attendance records",
+  "Grade records"
+];
+
+const trustPoints = [
+  ["Parent-led by design", "You stay in control of curriculum, instruction, and the story your records tell."],
+  ["Built for clarity", "Keep grades, attendance, credits, awards, and samples organized before you need them."],
+  ["Recognition matters", "Give students polished documents that celebrate effort, growth, and achievement."]
+];
+
 type PricingTier = [string, string, string, string[]];
 type Faq = [string, string];
 
@@ -41,7 +56,7 @@ const pricing: PricingTier[] = [
 const faqs: Faq[] = [
   [
     "Is Traveling Scholars a school?",
-    "Traveling Scholars is a homeschool organization and records platform, not a replacement for parent-led homeschool responsibility."
+    "No. Traveling Scholars is a homeschool organization and records platform, not an accredited school or curriculum provider."
   ],
   [
     "Do I need to pay today?",
@@ -111,7 +126,7 @@ export default function Home() {
             </div>
           </div>
           <a href="#early-access" className="shrink-0 rounded-full bg-[#4b2f83] px-5 py-3 text-sm font-black text-white shadow-lg shadow-[#4b2f83]/15 transition hover:bg-[#3f2770] sm:px-6">
-            Join Early Access
+            Join the Waitlist
           </a>
         </nav>
 
@@ -134,7 +149,7 @@ export default function Home() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a href="#early-access" className="rounded-2xl bg-[#4b2f83] px-8 py-4 text-center font-black text-white shadow-xl shadow-[#4b2f83]/15 transition hover:bg-[#3f2770]">
-                Request Early Access
+                Join the Parent Waitlist
               </a>
               <a href="#features" className="rounded-2xl border border-slate-200 bg-white px-8 py-4 text-center font-black text-slate-900 shadow-sm transition hover:border-[#d6a84f]">
                 Explore Features
@@ -168,6 +183,35 @@ export default function Home() {
           {["Parent controlled", "Private by design", "Mobile first", "Built for families"].map((item) => (
             <div key={item} className="font-black text-[#4b2f83]">{item}</div>
           ))}
+        </div>
+      </section>
+
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div>
+              <p className="text-sm font-black uppercase tracking-[0.32em] text-[#b88a2d]">
+                Built for parents
+              </p>
+              <h2 className="mt-4 text-4xl font-black md:text-5xl">
+                Less record stress. More confidence when it is time to show progress.
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-slate-700">
+                Traveling Scholars helps homeschool families keep important records
+                organized, presentable, and ready for milestones without turning your
+                homeschool into a paperwork project.
+              </p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-3">
+              {trustPoints.map(([title, text]) => (
+                <div key={title} className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200/70">
+                  <h3 className="text-lg font-black text-[#4b2f83]">{title}</h3>
+                  <p className="mt-3 leading-7 text-slate-700">{text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -214,6 +258,27 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-black uppercase tracking-[0.32em] text-[#b88a2d]">
+              What families will be able to create
+            </p>
+            <h2 className="mt-4 text-4xl font-black md:text-5xl">
+              Official-feeling records without heavy software or scattered files.
+            </h2>
+          </div>
+
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {creations.map((item) => (
+              <div key={item} className="rounded-3xl border border-slate-200 bg-white p-6 text-center text-xl font-black text-[#4b2f83] shadow-sm">
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="pricing" className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
@@ -245,7 +310,7 @@ export default function Home() {
                   ))}
                 </ul>
                 <a href="mailto:hello@travelingscholars.org?subject=Traveling%20Scholars%20early%20access" className="mt-auto inline-block rounded-2xl bg-[#4b2f83] px-6 py-4 text-center font-black text-white shadow-lg shadow-[#4b2f83]/15 transition hover:bg-[#3f2770]">
-                  Request Access
+                  Ask About This Option
                 </a>
               </div>
             ))}
@@ -259,8 +324,8 @@ export default function Home() {
             <p className="font-black text-[#f1d28a]">Founding Family Early Access</p>
             <h2 className="mt-4 text-4xl font-black md:text-5xl">Help shape the platform before launch.</h2>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-white/80">
-              Join the early access list for launch updates, founding family pricing,
-              and first access to Traveling Scholars.
+              Join the parent waitlist for launch updates, founding family pricing,
+              and first access to Traveling Scholars when preview invitations open.
             </p>
           </div>
           <div className="rounded-[1.5rem] bg-white p-6 text-slate-950">
@@ -272,7 +337,7 @@ export default function Home() {
               and founding family information.
             </p>
             <a href="mailto:hello@travelingscholars.org?subject=Traveling%20Scholars%20early%20access" className="mt-6 inline-block w-full rounded-2xl bg-[#4b2f83] px-8 py-4 text-center font-black text-white">
-              Email for Early Access
+              Join by Email
             </a>
           </div>
         </div>
@@ -282,6 +347,7 @@ export default function Home() {
         <div className="mx-auto max-w-5xl rounded-3xl border border-[#d6a84f]/40 bg-[#fffaf0] p-7 text-center shadow-sm">
           <p className="text-base font-bold leading-8 text-slate-800">
             Traveling Scholars is a homeschool organization and records platform.
+            It is not an accredited school or curriculum provider.
             Parents remain responsible for curriculum, instruction, records accuracy,
             and homeschool legal compliance.
           </p>
