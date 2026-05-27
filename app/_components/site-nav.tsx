@@ -22,6 +22,7 @@ export function SiteNav({ ctaHref = "/#early-access" }: SiteNavProps) {
           width={288}
           height={192}
           sizes="(min-width: 640px) 96px, 72px"
+          loading="lazy"
           className="h-12 w-[72px] shrink-0 rounded-xl object-cover shadow-sm ring-1 ring-black/5 sm:h-16 sm:w-24"
         />
         <span className="min-w-0">

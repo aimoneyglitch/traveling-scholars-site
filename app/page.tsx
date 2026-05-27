@@ -45,7 +45,7 @@ const structuredData = {
       "@id": "https://thetravelingscholars.org/#organization",
       name: "Traveling Scholars Foundation Inc.",
       url: "https://thetravelingscholars.org",
-      logo: "https://thetravelingscholars.org/logo.jpg",
+      logo: "https://thetravelingscholars.org/logo-web.jpg",
       description:
         "A homeschool organization and records platform for transcripts, portfolios, student records, certificates, IDs, and homeschool family community support."
     },

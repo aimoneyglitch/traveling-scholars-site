@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     siteName: "Traveling Scholars Foundation Inc.",
     images: [
       {
-        url: "/logo.jpg",
-        width: 1536,
-        height: 1024,
+        url: "/logo-og.jpg",
+        width: 1200,
+        height: 630,
         alt: "Traveling Scholars Foundation Inc. logo"
       }
     ],
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Traveling Scholars Foundation Inc.",
     description:
       "Modern homeschool organization, records, portfolios, and recognition platform.",
-    images: ["/logo.jpg"]
+    images: ["/logo-og.jpg"]
   }
 };
 

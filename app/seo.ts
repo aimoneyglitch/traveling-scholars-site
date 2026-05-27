@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 const siteName = "Traveling Scholars Foundation Inc.";
 const siteUrl = "https://thetravelingscholars.org";
 const socialImage = {
-  url: "/logo.jpg",
-  width: 1536,
-  height: 1024,
+  url: "/logo-og.jpg",
+  width: 1200,
+  height: 630,
   alt: "Traveling Scholars Foundation Inc. logo"
 };
 
