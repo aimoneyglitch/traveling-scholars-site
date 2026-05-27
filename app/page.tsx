@@ -1,4 +1,5 @@
 import { SiteNav } from "./_components/site-nav";
+import { SiteFooter } from "./_components/site-footer";
 import { creations, faqs, features, mailtoHref, pricing, steps, trustPoints } from "./site-data";
 
 const structuredData = {
@@ -281,15 +282,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-slate-200 bg-white px-4 py-8 sm:px-6 sm:py-10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div>
-            <div className="text-xl font-black text-[#4b2f83]">Traveling Scholars</div>
-            <p className="text-sm text-slate-500">Learning Beyond Walls, Growing Beyond Limits.</p>
-          </div>
-          <p className="text-sm text-slate-500">&copy; 2026 Traveling Scholars Foundation Inc.</p>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

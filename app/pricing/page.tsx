@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteFooter } from "../_components/site-footer";
 import { SiteNav } from "../_components/site-nav";
 import { mailtoHref, pricing } from "../site-data";
 
@@ -67,6 +68,7 @@ export default function PricingPage() {
           </p>
         </div>
       </section>
+      <SiteFooter />
     </main>
   );
 }

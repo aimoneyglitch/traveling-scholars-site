@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteFooter } from "../_components/site-footer";
 import { SiteNav } from "../_components/site-nav";
 
 const previewSections = [
@@ -126,6 +127,7 @@ export default function AppPreviewPage() {
           </p>
         </div>
       </section>
+      <SiteFooter />
     </main>
   );
 }

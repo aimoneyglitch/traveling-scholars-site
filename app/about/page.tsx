@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteFooter } from "../_components/site-footer";
 import { SiteNav } from "../_components/site-nav";
 
 export const metadata: Metadata = {
@@ -58,6 +59,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <SiteFooter />
     </main>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteFooter } from "../_components/site-footer";
 import { SiteNav } from "../_components/site-nav";
 import { faqs } from "../site-data";
 
@@ -42,6 +43,7 @@ export default function FaqPage() {
           ))}
         </div>
       </section>
+      <SiteFooter />
     </main>
   );
 }
