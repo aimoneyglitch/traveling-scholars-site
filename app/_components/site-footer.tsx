@@ -5,6 +5,7 @@ const footerLinks = [
 ];
 
 const resourceLinks = [
+  ["Dashboard Preview", "/dashboard-preview/"],
   ["Homeschool Transcripts", "/homeschool-transcripts/"],
   ["Student Portfolios", "/student-portfolios/"],
   ["Record Keeping", "/homeschool-record-keeping/"],

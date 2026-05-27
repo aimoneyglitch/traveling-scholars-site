@@ -3,6 +3,7 @@ import Image from "next/image";
 const links = [
   ["Features", "/features/"],
   ["App Preview", "/app-preview/"],
+  ["Dashboard Preview", "/dashboard-preview/"],
   ["Pricing", "/pricing/"],
   ["FAQ", "/faq/"],
   ["About", "/about/"]
