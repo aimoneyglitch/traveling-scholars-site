@@ -1,76 +1,5 @@
-import Image from "next/image";
-
-const features = [
-  ["Academic Records", "Attendance, grades, GPA, credits, progress reports, and transcripts organized in one place."],
-  ["Student Recognition", "Certificates, student IDs, honor roll, achievement tracking, and graduation-ready documents."],
-  ["Portfolio Vault", "Store projects, writing samples, photos, volunteer records, and homeschool documentation."],
-  ["Community Support", "Future field trips, graduation events, fundraising opportunities, and family connection."]
-];
-
-const steps = [
-  ["Create your family account", "Parents stay in control from day one."],
-  ["Add student profiles", "Build organized records for each child."],
-  ["Track progress", "Attendance, grades, credits, and achievements stay clean."],
-  ["Generate documents", "Transcripts, certificates, IDs, and portfolios look professional."]
-];
-
-const creations = [
-  "Transcripts",
-  "Student IDs",
-  "Certificates",
-  "Portfolios",
-  "Attendance records",
-  "Grade records"
-];
-
-const trustPoints = [
-  ["Parent-led by design", "You stay in control of curriculum, instruction, and the story your records tell."],
-  ["Built for clarity", "Keep grades, attendance, credits, awards, and samples organized before you need them."],
-  ["Recognition matters", "Give students polished documents that celebrate effort, growth, and achievement."]
-];
-
-type PricingTier = [string, string, string, string[]];
-type Faq = [string, string];
-
-const pricing: PricingTier[] = [
-  [
-    "Free Preview",
-    "$0",
-    "For families who want to see the platform before launch.",
-    ["Launch updates", "Feature previews", "Early access invitations"]
-  ],
-  [
-    "Founding Family",
-    "Early pricing",
-    "For families ready to organize records and help shape the first release.",
-    ["Priority early access", "Founding family pricing", "Input on record and portfolio tools"]
-  ],
-  [
-    "Legacy Family",
-    "Best fit",
-    "For long-term homeschool families who want polished records year after year.",
-    ["Multi-year planning", "Student recognition tools", "Portfolio and transcript support"]
-  ]
-];
-
-const faqs: Faq[] = [
-  [
-    "Is Traveling Scholars a school?",
-    "No. Traveling Scholars is a homeschool organization and records platform, not an accredited school or curriculum provider."
-  ],
-  [
-    "Do I need to pay today?",
-    "No. Early access is handled by email for now, so families can learn more before launch."
-  ],
-  [
-    "What will families be able to track?",
-    "The platform is being built for attendance, grades, credits, transcripts, certificates, portfolios, and student recognition."
-  ],
-  [
-    "Will this handle my state's homeschool laws?",
-    "Parents remain responsible for understanding and following their local homeschool requirements."
-  ]
-];
+import { SiteNav } from "./_components/site-nav";
+import { creations, faqs, features, mailtoHref, pricing, steps, trustPoints } from "./site-data";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -106,30 +35,7 @@ export default function Home() {
       />
 
       <section className="mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-5 lg:py-7">
-        <nav className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-5">
-          <div className="flex min-w-0 items-center gap-3 sm:gap-4">
-            <Image
-              src="/logo.jpg"
-              alt="Traveling Scholars Foundation Inc. logo"
-              width={1536}
-              height={1024}
-              sizes="(min-width: 640px) 96px, 72px"
-              priority
-              className="h-12 w-[72px] shrink-0 rounded-xl object-cover shadow-sm ring-1 ring-black/5 sm:h-16 sm:w-24"
-            />
-            <div className="min-w-0">
-              <div className="text-lg font-black leading-tight text-[#4b2f83] sm:text-2xl">
-                Traveling Scholars
-              </div>
-              <div className="text-[0.68rem] font-bold uppercase tracking-[0.16em] text-slate-500 sm:text-sm">
-                Foundation Inc.
-              </div>
-            </div>
-          </div>
-          <a href="#early-access" className="w-full shrink-0 rounded-full bg-[#4b2f83] px-5 py-3 text-center text-sm font-black text-white shadow-lg shadow-[#4b2f83]/15 transition hover:bg-[#3f2770] sm:w-auto sm:px-6">
-            Join the Waitlist
-          </a>
-        </nav>
+        <SiteNav ctaHref="#early-access" />
 
         <div className="grid items-center gap-10 py-12 sm:min-h-[78vh] sm:py-16 lg:grid-cols-[1.04fr_0.96fr] lg:gap-16 lg:py-20">
           <div className="max-w-3xl">
@@ -310,7 +216,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <a href="mailto:hello@travelingscholars.org?subject=Traveling%20Scholars%20early%20access" className="mt-auto inline-block w-full rounded-2xl bg-[#4b2f83] px-5 py-4 text-center font-black text-white shadow-lg shadow-[#4b2f83]/15 transition hover:bg-[#3f2770]">
+                <a href={mailtoHref} className="mt-auto inline-block w-full rounded-2xl bg-[#4b2f83] px-5 py-4 text-center font-black text-white shadow-lg shadow-[#4b2f83]/15 transition hover:bg-[#3f2770]">
                   Ask About This Option
                 </a>
               </div>
@@ -337,7 +243,7 @@ export default function Home() {
               Send a quick email and we will follow up with preview details, timing,
               and founding family information.
             </p>
-            <a href="mailto:hello@travelingscholars.org?subject=Traveling%20Scholars%20early%20access" className="mt-6 inline-block w-full rounded-2xl bg-[#4b2f83] px-5 py-4 text-center font-black text-white">
+            <a href={mailtoHref} className="mt-6 inline-block w-full rounded-2xl bg-[#4b2f83] px-5 py-4 text-center font-black text-white">
               Join by Email
             </a>
           </div>
