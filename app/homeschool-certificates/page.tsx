@@ -1,14 +1,12 @@
-import type { Metadata } from "next";
 import { ResourcePage } from "../_components/resource-page";
+import { pageMetadata } from "../seo";
 
-export const metadata: Metadata = {
-  title: "Homeschool Certificates | Traveling Scholars Foundation Inc.",
+export const metadata = pageMetadata({
+  title: "Homeschool Certificates and Recognition | Traveling Scholars",
   description:
-    "Explore homeschool certificates, student recognition documents, IDs, and milestone records for parent-led families.",
-  alternates: {
-    canonical: "/homeschool-certificates/"
-  }
-};
+    "Explore homeschool certificates, student IDs, recognition documents, and milestone records for parent-led families.",
+  path: "/homeschool-certificates/"
+});
 
 export default function HomeschoolCertificatesPage() {
   return (

@@ -1,16 +1,14 @@
-import type { Metadata } from "next";
 import { SiteFooter } from "../_components/site-footer";
 import { SiteNav } from "../_components/site-nav";
+import { pageMetadata } from "../seo";
 import { creations, features, trustPoints } from "../site-data";
 
-export const metadata: Metadata = {
-  title: "Features | Traveling Scholars Foundation Inc.",
+export const metadata = pageMetadata({
+  title: "Homeschool Record Platform Features | Traveling Scholars",
   description:
-    "Explore homeschool records, student recognition, portfolio, transcript, attendance, and grade tracking features for Traveling Scholars families.",
-  alternates: {
-    canonical: "/features/"
-  }
-};
+    "Explore parent-focused homeschool tools for transcripts, attendance, grades, portfolios, student IDs, certificates, and family-controlled records.",
+  path: "/features/"
+});
 
 export default function FeaturesPage() {
   return (

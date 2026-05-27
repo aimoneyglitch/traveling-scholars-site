@@ -1,15 +1,13 @@
-import type { Metadata } from "next";
 import { SiteFooter } from "../_components/site-footer";
 import { SiteNav } from "../_components/site-nav";
+import { pageMetadata } from "../seo";
 
-export const metadata: Metadata = {
-  title: "About | Traveling Scholars Foundation Inc.",
+export const metadata = pageMetadata({
+  title: "About Traveling Scholars | Parent-Led Homeschool Records",
   description:
-    "Learn about Traveling Scholars Foundation Inc., a homeschool organization and records platform built for parent-led families.",
-  alternates: {
-    canonical: "/about/"
-  }
-};
+    "Learn about Traveling Scholars Foundation Inc., a homeschool organization and records platform for parent-led families and student milestones.",
+  path: "/about/"
+});
 
 export default function AboutPage() {
   return (

@@ -1,14 +1,12 @@
-import type { Metadata } from "next";
 import { ResourcePage } from "../_components/resource-page";
+import { pageMetadata } from "../seo";
 
-export const metadata: Metadata = {
-  title: "Homeschool Record Keeping | Traveling Scholars Foundation Inc.",
+export const metadata = pageMetadata({
+  title: "Homeschool Record Keeping Guide | Traveling Scholars",
   description:
-    "A parent-focused overview of homeschool record keeping for attendance, grades, credits, portfolios, transcripts, and legal responsibility.",
-  alternates: {
-    canonical: "/homeschool-record-keeping/"
-  }
-};
+    "A parent-focused guide to homeschool record keeping for attendance, grades, credits, portfolios, transcripts, and legal responsibility.",
+  path: "/homeschool-record-keeping/"
+});
 
 export default function HomeschoolRecordKeepingPage() {
   return (

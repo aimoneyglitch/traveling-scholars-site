@@ -1,14 +1,12 @@
-import type { Metadata } from "next";
 import { ResourcePage } from "../_components/resource-page";
+import { pageMetadata } from "../seo";
 
-export const metadata: Metadata = {
-  title: "Homeschool Transcripts | Traveling Scholars Foundation Inc.",
+export const metadata = pageMetadata({
+  title: "Homeschool Transcripts for Parent Records | Traveling Scholars",
   description:
     "Parent-focused guidance for organizing homeschool transcript records, including courses, credits, grades, GPA, and supporting documentation.",
-  alternates: {
-    canonical: "/homeschool-transcripts/"
-  }
-};
+  path: "/homeschool-transcripts/"
+});
 
 export default function HomeschoolTranscriptsPage() {
   return (

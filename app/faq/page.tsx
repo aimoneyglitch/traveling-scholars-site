@@ -1,16 +1,14 @@
-import type { Metadata } from "next";
 import { SiteFooter } from "../_components/site-footer";
 import { SiteNav } from "../_components/site-nav";
+import { pageMetadata } from "../seo";
 import { faqs } from "../site-data";
 
-export const metadata: Metadata = {
-  title: "FAQ | Traveling Scholars Foundation Inc.",
+export const metadata = pageMetadata({
+  title: "Homeschool Records FAQ | Traveling Scholars",
   description:
-    "Answers to common questions about Traveling Scholars early access, homeschool records, legal responsibility, and platform plans.",
-  alternates: {
-    canonical: "/faq/"
-  }
-};
+    "Answers for parents about Traveling Scholars early access, homeschool records, platform plans, privacy, and parent legal responsibility.",
+  path: "/faq/"
+});
 
 export default function FaqPage() {
   return (

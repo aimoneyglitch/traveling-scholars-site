@@ -1,6 +1,7 @@
 import { SiteNav } from "./_components/site-nav";
 import { SiteFooter } from "./_components/site-footer";
 import { WaitlistForm } from "./_components/waitlist-form";
+import { pageMetadata } from "./seo";
 import { creations, faqs, features, pricing, steps, trustPoints } from "./site-data";
 
 const heroTrust = [
@@ -60,6 +61,13 @@ const structuredData = {
     }
   ]
 };
+
+export const metadata = pageMetadata({
+  title: "Traveling Scholars Foundation Inc. | Homeschool Records Platform",
+  description:
+    "Parent-controlled homeschool records, transcripts, portfolios, attendance, grades, certificates, and student IDs for organized homeschool families.",
+  path: "/"
+});
 
 export default function Home() {
   return (

@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import { SiteFooter } from "../_components/site-footer";
 import { SiteNav } from "../_components/site-nav";
+import { pageMetadata } from "../seo";
 
 const terms = [
   [
@@ -17,14 +17,12 @@ const terms = [
   ]
 ];
 
-export const metadata: Metadata = {
-  title: "Terms | Traveling Scholars Foundation Inc.",
+export const metadata = pageMetadata({
+  title: "Terms for Parent-Led Records | Traveling Scholars",
   description:
-    "Basic terms and educational responsibility notes for Traveling Scholars Foundation Inc. and its homeschool records platform preview.",
-  alternates: {
-    canonical: "/terms/"
-  }
-};
+    "Review clear terms for Traveling Scholars, including parent responsibility, homeschool record accuracy, and non-accredited platform boundaries.",
+  path: "/terms/"
+});
 
 export default function TermsPage() {
   return (

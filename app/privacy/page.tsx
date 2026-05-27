@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import { SiteFooter } from "../_components/site-footer";
 import { SiteNav } from "../_components/site-nav";
+import { pageMetadata } from "../seo";
 
 const privacyPoints = [
   [
@@ -17,14 +17,12 @@ const privacyPoints = [
   ]
 ];
 
-export const metadata: Metadata = {
-  title: "Privacy | Traveling Scholars Foundation Inc.",
+export const metadata = pageMetadata({
+  title: "Privacy for Homeschool Families | Traveling Scholars",
   description:
-    "Privacy principles for Traveling Scholars Foundation Inc., including family privacy, student data protection, and parent-owned records.",
-  alternates: {
-    canonical: "/privacy/"
-  }
-};
+    "Read Traveling Scholars privacy principles for homeschool families, including parent-owned records, student data care, and no selling student data.",
+  path: "/privacy/"
+});
 
 export default function PrivacyPage() {
   return (

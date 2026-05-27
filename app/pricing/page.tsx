@@ -1,16 +1,14 @@
-import type { Metadata } from "next";
 import { SiteFooter } from "../_components/site-footer";
 import { SiteNav } from "../_components/site-nav";
+import { pageMetadata } from "../seo";
 import { pricing } from "../site-data";
 
-export const metadata: Metadata = {
-  title: "Pricing | Traveling Scholars Foundation Inc.",
+export const metadata = pageMetadata({
+  title: "Homeschool Records Pricing | Traveling Scholars",
   description:
-    "Review early access pricing paths for Traveling Scholars, including Free Preview, Founding Family, and Legacy Family options.",
-  alternates: {
-    canonical: "/pricing/"
-  }
-};
+    "Review early access options for homeschool families, including Free Preview, Founding Family, and Legacy Family paths for Traveling Scholars.",
+  path: "/pricing/"
+});
 
 export default function PricingPage() {
   return (

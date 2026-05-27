@@ -1,16 +1,14 @@
-import type { Metadata } from "next";
 import { SiteFooter } from "../_components/site-footer";
 import { SiteNav } from "../_components/site-nav";
 import { WaitlistForm } from "../_components/waitlist-form";
+import { pageMetadata } from "../seo";
 
-export const metadata: Metadata = {
-  title: "Contact | Traveling Scholars Foundation Inc.",
+export const metadata = pageMetadata({
+  title: "Contact Traveling Scholars | Homeschool Early Access",
   description:
-    "Contact Traveling Scholars Foundation Inc. for early access, homeschool records questions, and launch updates.",
-  alternates: {
-    canonical: "/contact/"
-  }
-};
+    "Contact Traveling Scholars for homeschool records early access, launch updates, parent questions, and waitlist interest.",
+  path: "/contact/"
+});
 
 export default function ContactPage() {
   return (

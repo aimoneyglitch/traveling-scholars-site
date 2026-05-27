@@ -1,14 +1,12 @@
-import type { Metadata } from "next";
 import { ResourcePage } from "../_components/resource-page";
+import { pageMetadata } from "../seo";
 
-export const metadata: Metadata = {
-  title: "Student Portfolios | Traveling Scholars Foundation Inc.",
+export const metadata = pageMetadata({
+  title: "Homeschool Student Portfolios | Traveling Scholars",
   description:
-    "Learn how homeschool student portfolios can organize projects, writing samples, photos, achievements, and learning evidence.",
-  alternates: {
-    canonical: "/student-portfolios/"
-  }
-};
+    "Learn how homeschool student portfolios can organize projects, writing samples, photos, achievements, service, and evidence of learning.",
+  path: "/student-portfolios/"
+});
 
 export default function StudentPortfoliosPage() {
   return (

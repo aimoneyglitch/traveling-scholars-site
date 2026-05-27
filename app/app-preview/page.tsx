@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import { SiteFooter } from "../_components/site-footer";
 import { SiteNav } from "../_components/site-nav";
+import { pageMetadata } from "../seo";
 
 const previewSections = [
   [
@@ -68,14 +68,12 @@ const previewSections = [
   ]
 ];
 
-export const metadata: Metadata = {
-  title: "App Preview | Traveling Scholars Foundation Inc.",
+export const metadata = pageMetadata({
+  title: "Homeschool App Preview | Traveling Scholars",
   description:
-    "Preview the planned Traveling Scholars platform logic for parent dashboards, student profiles, attendance, gradebook, transcripts, certificates, IDs, and portfolio records.",
-  alternates: {
-    canonical: "/app-preview/"
-  }
-};
+    "Preview planned homeschool app logic for parent dashboards, student profiles, attendance, gradebook, transcripts, certificates, IDs, and portfolios.",
+  path: "/app-preview/"
+});
 
 export default function AppPreviewPage() {
   return (
