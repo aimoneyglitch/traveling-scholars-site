@@ -1,8 +1,9 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 const links = [
   ["Features", "/features/"],
   ["App Preview", "/app-preview/"],
+  ["Resources", "/resources/"],
   ["Dashboard Preview", "/dashboard-preview/"],
   ["Pricing", "/pricing/"],
   ["FAQ", "/faq/"],
@@ -41,8 +42,8 @@ export function SiteNav({ ctaHref = "/#early-access" }: SiteNavProps) {
 
         <details className="group relative lg:hidden">
           <summary className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-2xl bg-white text-xl font-black text-[#4b2f83] shadow-md shadow-slate-900/5 ring-1 ring-slate-200 transition hover:ring-[#d6a84f] [&::-webkit-details-marker]:hidden">
-            <span className="group-open:hidden">☰</span>
-            <span className="hidden group-open:inline">×</span>
+            <span className="group-open:hidden">â˜°</span>
+            <span className="hidden group-open:inline">Ã—</span>
           </summary>
           <div className="absolute right-0 top-14 z-20 w-[min(20rem,calc(100vw-2rem))] rounded-3xl border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-900/15">
             <div className="grid gap-1.5">
@@ -53,7 +54,7 @@ export function SiteNav({ ctaHref = "/#early-access" }: SiteNavProps) {
               ))}
             </div>
             <a href={ctaHref} className="mt-3 block w-full rounded-2xl bg-[#4b2f83] px-5 py-4 text-center text-sm font-black text-white shadow-lg shadow-[#4b2f83]/15 transition hover:bg-[#3f2770]">
-              Join the Waitlist →
+              Join the Waitlist â†’
             </a>
           </div>
         </details>
@@ -74,3 +75,4 @@ export function SiteNav({ ctaHref = "/#early-access" }: SiteNavProps) {
     </nav>
   );
 }
+

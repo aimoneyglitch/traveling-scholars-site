@@ -1,4 +1,4 @@
-const footerLinks = [
+﻿const footerLinks = [
   ["Privacy", "/privacy/"],
   ["Terms", "/terms/"],
   ["Contact", "/contact/"]
@@ -6,6 +6,7 @@ const footerLinks = [
 
 const resourceLinks = [
   ["Dashboard Preview", "/dashboard-preview/"],
+  ["Resource Library", "/resources/"],
   ["Homeschool Transcripts", "/homeschool-transcripts/"],
   ["Student Portfolios", "/student-portfolios/"],
   ["Record Keeping", "/homeschool-record-keeping/"],
@@ -47,3 +48,4 @@ export function SiteFooter() {
     </footer>
   );
 }
+
