@@ -145,6 +145,33 @@ export default function ResourcesPage() {
         </div>
       </section>
 
+      <section className="bg-white px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl">
+            <p className="text-xs font-black uppercase tracking-[0.22em] text-[#b88a2d] sm:text-sm sm:tracking-[0.32em]">
+              Latest parent guides
+            </p>
+            <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl">
+              Start with the highest-impact homeschool record topics.
+            </h2>
+            <p className="mt-5 leading-7 text-slate-700">
+              These articles help families think through transcripts, templates, credits, attendance,
+              and yearly record keeping before the future platform launches.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            <a href="/blog/how-to-make-a-homeschool-transcript/" className="rounded-3xl border border-slate-200 bg-[#f8f4ee] p-6 shadow-sm transition hover:border-[#d6a84f] hover:bg-white">
+              <h3 className="text-xl font-black text-[#4b2f83]">How to Make a Homeschool Transcript</h3>
+              <p className="mt-3 leading-7 text-slate-700">A parent-friendly guide to transcript structure, courses, credits, grades, and supporting records.</p>
+            </a>
+            <a href="/blog/homeschool-record-keeping-what-to-save/" className="rounded-3xl border border-slate-200 bg-[#f8f4ee] p-6 shadow-sm transition hover:border-[#d6a84f] hover:bg-white">
+              <h3 className="text-xl font-black text-[#4b2f83]">What Homeschool Records to Save</h3>
+              <p className="mt-3 leading-7 text-slate-700">A practical yearly record keeping checklist for attendance, grades, portfolios, and transcripts.</p>
+            </a>
+          </div>
+        </div>
+      </section>
       <section className="bg-[#080d22] px-4 py-16 text-white sm:px-6 sm:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-4xl">
@@ -168,3 +195,4 @@ export default function ResourcesPage() {
     </main>
   );
 }
+

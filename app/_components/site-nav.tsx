@@ -4,6 +4,7 @@ const links = [
   ["Features", "/features/"],
   ["App Preview", "/app-preview/"],
   ["Resources", "/resources/"],
+  ["Blog", "/blog/"],
   ["Dashboard Preview", "/dashboard-preview/"],
   ["Pricing", "/pricing/"],
   ["FAQ", "/faq/"],
@@ -75,4 +76,5 @@ export function SiteNav({ ctaHref = "/#early-access" }: SiteNavProps) {
     </nav>
   );
 }
+
 

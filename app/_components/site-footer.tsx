@@ -7,6 +7,7 @@
 const resourceLinks = [
   ["Dashboard Preview", "/dashboard-preview/"],
   ["Resource Library", "/resources/"],
+  ["Blog", "/blog/"],
   ["Homeschool Transcripts", "/homeschool-transcripts/"],
   ["Student Portfolios", "/student-portfolios/"],
   ["Record Keeping", "/homeschool-record-keeping/"],
@@ -48,4 +49,5 @@ export function SiteFooter() {
     </footer>
   );
 }
+
 
